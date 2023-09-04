@@ -1,0 +1,23 @@
+# Start from a base image
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the requirements file into the container
+COPY ./requirements.txt /app/requirements.txt
+
+# Install the required packages
+RUN pip install --upgrade -r /app/requirements.txt
+
+# Copy the application code into the container
+COPY ./app.py /app/
+COPY ./model.joblib /app/
+
+# Expose the app port
+EXPOSE 8080
+
+# Run command
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
+#CMD  ["gunicorn", "--preload", "app:app", "-w", "3", "-k", "uvicorn.workers.UvicornWorker", "-b", "0.0.0.0:8080"]
+
