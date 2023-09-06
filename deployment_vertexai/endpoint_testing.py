@@ -11,17 +11,16 @@ import numpy as np
 file_path = "input.json"
 
 # Open and read the JSON file with test json request
-with open(file_path, 'r') as json_file:
-    instances = json.load(json_file)['instances']
+with open(file_path, "r") as json_file:
+    instances = json.load(json_file)["instances"]
 
 
 def predict_custom_trained_model_sample(
-
     instances: Union[List, List[List]],
-    project: str='home-credit-turing-college',
-    endpoint_id: str="8444293281784791040",
+    project: str = "home-credit-turing-college",
+    endpoint_id: str = "8444293281784791040",
     location: str = "europe-west2",
-    api_endpoint: str = "europe-west2-aiplatform.googleapis.com"
+    api_endpoint: str = "europe-west2-aiplatform.googleapis.com",
 ):
     """
     `instances` can be either single instance of type list or a list

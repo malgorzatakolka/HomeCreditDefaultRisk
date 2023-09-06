@@ -5,9 +5,9 @@ import pandas as pd
 from fastapi import FastAPI
 import joblib
 
+
 # Defining input class
 class HomeCreditRisk(BaseModel):
-
     CODE_GENDER: float
     AMT_INCOME_TOTAL: float
     AMT_CREDIT: float
@@ -188,29 +188,30 @@ class HomeCreditRisk(BaseModel):
     OLD_AMT_DRAWING_ALL_MEAN: float
     OLD_AMT_DRAWING_ALL_MAX: float
 
+
 # Defining output class
 class Predictions(BaseModel):
     default_proba: float
 
-#=========================================================
+
+# =========================================================
 
 # Starting the app
 app = FastAPI()
 
 # Loading the model
-model = joblib.load('model.joblib')
+model = joblib.load("model.joblib")
 
 
 # Initialising home page
 @app.get("/")
 def home_page():
-    return {"message": "Home Credit Default Risk App", 
-            "model_version": 0.1}
-          
+    return {"message": "Home Credit Default Risk App", "model_version": 0.1}
+
+
 # Inferencing endpoint
 @app.post("/predict", response_model=Predictions)
 def predict(data: HomeCreditRisk):
-    
     # Creating dataframe
     df = pd.DataFrame([data.dict()])
     # Make predictions
