@@ -14,9 +14,9 @@ Structure of Tables:
 
 This project focuses on:
 * data analysis and getting insight from correlations between dependent and independent variables- **[EDA.ipynb](EDA.ipynb)**
-* engineering and selecting features- **[Engineering](Engineering.ipynb)**
-* fitting models to data- **[Modeling](Modeling.ipynb)**
-* creating pipeline for entries from new applicants without credit history- **[Finalising](Finalising_pipeline.ipynb)**
+* engineering and selecting features- **[Engineering.ipynb](Engineering.ipynb)**
+* fitting models to data- **[Modeling.ipynb](Modeling.ipynb)**
+* creating pipeline for entries from new applicants without credit history- **[Finalising_pipeline.ipynb](Finalising_pipeline.ipynb)**
 * deploying best performing model to Google Cloud Platform- **[deployment_fastapi](deployment_fastapi)** , **[deployment_vertexai](deployment_vertexai)**
 
 # EDA.ipynb
