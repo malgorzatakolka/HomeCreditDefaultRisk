@@ -183,7 +183,8 @@ To make predictions via API:
 * Run the imports and functions from this notebook
 * Prepare the entry in DataFrame format assign to ```X_api```
 * Transform the entry: ```X_api = final_pipeline.transform(X_api)```
-* Change the type of data to dictionary: ```X_api = X_api.to_dict(orient='record')```
+* Change the type of data to dictionary: ```X_api = X_api.to_dict(orient='record')[0]```
+* Make a json format: ```json.dumps(X_api)```
 * Go to https://default-risk-fastapi-f4fhso7e5q-nw.a.run.app/docs
 * Click *predict* then *try it out*
 * Copy prepared input and past in a given format
