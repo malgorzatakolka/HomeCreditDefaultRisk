@@ -1,0 +1,14 @@
+numpy==1.23.5
+pandas==1.5.3
+xgboost==1.7.6
+lghtgbm==4.0.0
+pydantic==2.2.1
+fastapi==0.101.1
+uvicorn==0.23.2
+feature-engine==1.6.1
+joblib==1.3.1
+scikit-learn==1.2.2
+seaborn==0.12.2
+matplotlib==3.7.2
+phik==0.12.3
+scipy==1.11.1
